@@ -22,6 +22,7 @@ FROM route a JOIN route b ON
 WHERE a.stop=53 and b.stop = 149
 
 -- 6.
+SELECT a.company, a.num, stopa.name, stopb.name
 FROM route a JOIN route b ON
   (a.company=b.company AND a.num=b.num)
   JOIN stops stopa ON (a.stop=stopa.id)
